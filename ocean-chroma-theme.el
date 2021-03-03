@@ -199,6 +199,194 @@
                           ;; Note: not including scrollbar or toolbar settings as these are usually
                           ;; set by the OS or environment, hence themes don't usually set them.
 
+                          ;; **Built-in modes**
+
+                          ;; *Outline mode*
+                          `(outline-1 ((t
+                                        (:foreground ,chroma-yellow))))
+                          `(outline-2 ((t
+                                        (:foreground ,chroma-red))))
+                          `(outline-3 ((t
+                                        (:foreground ,chroma-blue))))
+                          `(outline-4 ((t
+                                        (:foreground ,chroma-green))))
+                          `(outline-5 ((t
+                                        (:foreground ,chroma-yellow))))
+                          `(outline-6 ((t
+                                        (:foreground ,chroma-red))))
+                          `(outline-7 ((t
+                                        (:foreground ,chroma-blue))))
+                          `(outline-8 ((t
+                                        (:foreground ,chroma-green))))
+
+                          ;; *Compilation*
+                          `(compilation-info-face ((t
+                                                    (:inherit success))))
+                          `(compilation-error-face ((t
+                                                     (:inherit error))))
+                          `(compilation-warning-face ((t
+                                                       (:inherit warning))))
+                          `(compilation-info ((t
+                                               (:inherit success))))
+                          `(compilation-error ((t
+                                                (:inherit error))))
+                          `(compilation-warning ((t
+                                                  (:inherit warning))))
+                          `(compilation-mode-line-fail ((t
+                                                         (:inherit error))))
+                          `(compilation-mode-line-exit ((t
+                                                         (:inherit error
+                                                                   :foreground ,dark-chroma-red))))
+                          `(compilation-mode-line-run ((t
+                                                        (:inherit success))))
+                          `(compilation-face ((t
+                                               (:foreground ,duck-egg))))
+                          `(compilation-message-face ((t
+                                                       (:foreground ,off-white))))
+                          `(compilation-line-face ((t
+                                                    (:foreground ,light-teal))))
+                          `(compilation-line-number ((t
+                                                      (:foreground ,mid-teal))))
+                          `(compilation-column-face ((t
+                                                      (:foreground ,chroma-blue))))
+                          `(compilation-enter-directory-face ((t
+                                                               (:foreground ,light-teal))))
+                          `(compilation-leave-directory-face ((t
+                                                               (:foreground ,mid-teal))))
+
+                          ;; *Org mode*
+                          ;; Headings and footnotes
+                          `(org-document-info ((t
+                                                (:foreground ,light-teal))))
+                          `(org-document-info-keyword ((t
+                                                        (:foreground ,mid-teal))))
+                          `(org-document-title ((t
+                                                 (:foreground ,off-white))))
+                          `(org-footnote ((t
+                                           (:foreground ,light-teal
+                                                        :underline t))))
+
+                          ;; Cycle through 'chroma' (primary) colours for nested level headings
+                          `(org-level-1 ((t
+                                          (:foreground ,chroma-yellow))))
+                          `(org-level-2 ((t
+                                          (:foreground ,chroma-red))))
+                          `(org-level-3 ((t
+                                          (:foreground ,chroma-blue))))
+                          `(org-level-4 ((t
+                                          (:foreground ,chroma-green))))
+                          `(org-level-5 ((t
+                                          (:foreground ,chroma-yellow))))
+                          `(org-level-6 ((t
+                                          (:foreground ,chroma-red))))
+                          `(org-level-7 ((t
+                                          (:foreground ,chroma-blue))))
+                          `(org-level-8 ((t
+                                          (:foreground ,chroma-green))))
+
+                          ;; Other prominent org elements e.g. level markers and links
+                          `(org-tag ((t
+                                      (:slant italic
+                                              :underline t))))
+                          `(org-ellipsis ((t
+                                           (:foreground ,off-white))))
+                          `(org-hide ((t
+                                       (:foreground ,off-white))))
+                          `(org-link ((t
+                                       (:inherit link))))
+                          `(org-warning ((t
+                                          (:inherit warning))))
+
+                          ;; Column view
+                          `(org-column ((t
+                                         (:background ,extra-dark-teal))))
+                          `(org-column-title ((t
+                                               (:background ,very-dark-teal
+                                                            :underline t
+                                                            :weight bold))))
+
+                          ;; Code blocks
+                          '(org-meta-line ((t
+                                            (:inherit linum))))
+                          `(org-block ((t
+                                        (:background ,extra-dark-teal))))
+                          `(org-block-background ((t
+                                                   (:background ,extra-dark-teal))))
+
+                          ;; Tables and grids, including table formulae
+                          `(org-table ((t
+                                        (:foreground ,light-teal))))
+                          `(org-formula ((t
+                                          (:foreground ,dark-chroma-red))))
+                          `(org-time-grid ((t
+                                            (:foreground ,light-teal))))
+
+                          ;; Drawers
+                          `(org-drawer ((t
+                                         (:foreground ,dark-chroma-red))))
+
+                          ;; Task- and deadline- related org features: prominent in white
+                          `(org-todo ((t
+                                       (:bold t
+                                              :foreground ,off-white
+                                              :weight bold))))
+                          `(org-special-keyword ((t
+                                                  (:inherit org-todo))))
+                          `(org-priority ((t
+                                           (:inherit org-todo
+                                                     :underline t))))
+                          `(org-done ((t
+                                       (:bold t
+                                              :foreground ,light-teal
+                                              :weight bold))))
+                          `(org-headline-done ((t
+                                                (:inherit org-done
+                                                          :weight ultra-bold))))
+                          `(org-checkbox ((t
+                                           (:inherit lazy-highlight))))
+                          `(org-checkbox-statistics-done ((t
+                                                           (:inherit org-done))))
+                          `(org-checkbox-statistics-todo ((t
+                                                           (:inherit org-todo))))
+
+                          ;; Dates and deadlines
+                          `(org-date ((t
+                                       (:foreground ,off-white
+                                                    :underline t))))
+                          `(org-deadline-announce ((t
+                                                    (:inherit org-date
+                                                              :weight ultra-bold))))
+                          `(org-upcoming-deadline ((t
+                                                    (:inherit warning))))
+
+                          ;; Agenda and calendaring
+                          `(org-scheduled ((t
+                                            (:foreground ,chroma-yellow
+                                                         :weight bold))))
+                          `(org-scheduled-previously ((t
+                                                       (:foreground ,chroma-green))))
+                          `(org-scheduled-today ((t
+                                                  (:foreground ,chroma-red))))
+                          `(org-agenda-clocking ((t
+                                                  (:inherit mode-line))))
+                          `(org-agenda-date-today ((t
+                                                    (:inherit org-date
+                                                              :slant italic
+                                                              :weight bold))))
+                          `(org-agenda-structure ((t
+                                                   (:foreground ,duck-egg))))
+                          `(org-sexp-date ((t
+                                            (:foreground ,dark-chroma-red))))
+                          `(org-archived ((t
+                                           (:foreground ,mid-teal))))
+
+                          ;; Clocks
+                          `(org-mode-line-clock ((t
+                                                  (:inherit mode-line
+                                                            :foreground ,chroma-yellow))))
+                          `(org-mode-line-clock-overrun ((t
+                                                          (:inherit mode-line
+                                                                    :foreground ,chroma-red))))
   )
 ) ; let* ends here
 
