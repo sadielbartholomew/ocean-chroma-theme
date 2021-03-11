@@ -27,38 +27,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Definition of theme
-
 (deftheme ocean-chroma "Fresh dark colour theme for Emacs 24+")
 
 (let*
 
-  ;;; Define the full (fairly minimal) colour scheme used by the theme
-  (
-   ;; Shades of 'ocean' i.e. blue-green colours, increasingly dark
-   (duck-egg           "#8FBCB5")  ; i.e. very-light-teal
-   (light-teal         "#33859D")
-   (mid-teal           "#004B66")
-   (dark-teal          "#00384D")
-   (very-dark-teal     "#001B25")
-   (extra-dark-teal    "#00131A")
+    ;;; Define the full (fairly minimal) colour scheme used by the theme
+    (
+     ;; Shades of 'ocean' i.e. blue-green colours, increasingly dark
+     (duck-egg           "#8FBCB5")  ; i.e. very-light-teal
+     (light-teal         "#33859D")
+     (mid-teal           "#004B66")
+     (dark-teal          "#002533")
+     (very-dark-teal     "#001B25")
+     (extra-dark-teal    "#00131A")
 
-   ;; Complementary 'chroma' primary (RGB) colours (plus secondary yellow)
-   (chroma-red         "#D22D2D")
-   (chroma-blue        "#3980C6")
-   (chroma-yellow      "#FFDF80")
-   (chroma-green       "#00B386")
+     ;; Complementary 'chroma' primary (RGB) colours (plus secondary yellow)
+     (chroma-red         "#D22D2D")
+     (chroma-blue        "#3980C6")
+     (chroma-yellow      "#FFDF80")
+     (chroma-green       "#00B386")
 
-   ;; Darker variations on some 'chroma' colours
-   (dark-chroma-red    "#9C1626")
-   (dark-chroma-blue   "#00264D")
+     ;; Darker variations on 'chroma' colours (bar yellow as dark yellow is ugly)
+     (dark-chroma-red    "#9C1626")
+     (dark-chroma-blue   "#00264D")
+     (dark-chroma-green  "#004D38")
 
-   ;; Variants on black and white
-   (off-black          "#0A0F14")
-   (off-white          "#E5E5FF")  ; a very bright-looking white
+     ;; Variants on black and white
+     (off-black          "#0A0F14")
+     (off-white          "#E5E5FF")  ; a very bright-looking white
 
-   ;; Some other complementary colours for extra elements
-   (maroon             "#28000E")
-  )
+     ;; Some other complementary colours for extra elements
+     (maroon             "#33000D")
+    )
 
   ;;; Apply the above faces with various styling to define and set the theme
   (custom-theme-set-faces `ocean-chroma
@@ -387,6 +387,65 @@
                           `(org-mode-line-clock-overrun ((t
                                                           (:inherit mode-line
                                                                     :foreground ,chroma-red))))
+
+                          ;; *Diffs, diff-mode and diff-hl*
+                          ;; Changes
+                          `(diff-added ((t
+                                         (:background ,dark-chroma-green
+                                                      :foreground ,chroma-green))))
+                          `(diff-changed ((t
+                                           (:background ,dark-chroma-blue
+                                                        :foreground ,off-white))))
+                          `(diff-removed ((t
+                                           (:background ,maroon
+                                                        :foreground ,dark-chroma-red))))
+
+                          ;; Context lines
+                          `(diff-context ((t
+                                           (:foreground ,duck-egg))))
+                          `(diff-header ((t
+                                          (:foreground ,off-white
+                                                       :weight ultra-bold))))
+                          `(diff-file-header ((t
+                                               (:foreground ,light-teal
+                                                            :weight ultra-bold))))
+                          `(diff-hunk-header ((t
+                                               (:foreground ,off-white))))
+                          `(diff-index ((t
+                                         (:foreground ,off-white
+                                                      :slant italic))))
+                          `(diff-function ((t
+                                            (:foreground ,light-teal))))
+                          `(diff-nonexistent ((t
+                                               (:inherit lazy-highlight))))
+
+                          ;; Refinements and indicators
+                          `(diff-refine-added ((t
+                                                (:inherit diff-added
+                                                          :slant italic))))
+                          `(diff-refine-changed ((t
+                                                  (:inherit diff-changed
+                                                            :slant italic))))
+                          `(diff-refine-removed ((t
+                                                  (:inherit diff-removed
+                                                            :slant italic))))
+                          `(diff-indicator-added ((t
+                                                   (:inherit diff-added))))
+                          `(diff-indicator-changed ((t
+                                                     (:inherit diff-changed))))
+                          `(diff-indicator-removed ((t
+                                                     (:inherit diff-removed))))
+
+                          ;; Chnages with diff-hl mode
+                          `(diff-hl-insert ((t
+                                             (:inherit fringe
+                                                       :foreground ,chroma-green))))
+                          `(diff-hl-change ((t
+                                             (:inherit fringe
+                                                       :foreground ,off-white))))
+                          `(diff-hl-delete ((t
+                                             (:inherit fringe
+                                                       :foreground ,chroma-red))))
   )
 ) ; let* ends here
 
