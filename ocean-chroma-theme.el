@@ -446,6 +446,10 @@
                           `(diff-hl-delete ((t
                                              (:inherit fringe
                                                        :foreground ,chroma-red))))
+
+                          ;; Shell-script mode specific faces:
+                          `(sh-heredoc ((t (:foreground ,chroma-yellow :weight ultra-bold))))
+                          `(sh-quoted-exec ((t (:foreground ,chroma-yellow))))
   )
 ) ; let* ends here
 
