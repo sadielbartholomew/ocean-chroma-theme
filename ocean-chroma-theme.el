@@ -447,9 +447,26 @@
                                              (:inherit fringe
                                                        :foreground ,chroma-red))))
 
-                          ;; Shell-script mode specific faces:
+                          ;; *smerge*
+                          ;; Main backgrounds for smerge diff blocks
+                          `(smerge-upper ((t (:background ,maroon))))
+                          `(smerge-mine ((t (:background ,maroon))))  ; -upper alias, obsolete 26.1
+                          `(smerge-lower ((t (:background ,dark-chroma-green))))
+                          `(smerge-other ((t (:background ,dark-chroma-green))))  ; -lower alias
+
+                          ;; Context
+                          `(smerge-base ((t (:foreground ,off-white))))
+                          `(smerge-markers ((t (:inherit linum :weight bold))))
+
+                          ;; Changes
+                          `(smerge-refined-added ((t (:background ,chroma-green))))
+                          `(smerge-refined-changed ((t (:foreground ,off-white :weight ultra-bold))))
+                          `(smerge-refined-removed ((t (:background ,dark-chroma-red))))
+
+                          ;; *Shell-script mode specific faces*
                           `(sh-heredoc ((t (:foreground ,chroma-yellow :weight ultra-bold))))
                           `(sh-quoted-exec ((t (:foreground ,chroma-yellow))))
+
   )
 ) ; let* ends here
 
