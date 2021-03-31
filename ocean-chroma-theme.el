@@ -273,6 +273,26 @@
    `(sh-heredoc ((t (:foreground ,chroma-yellow :weight ultra-bold))))
    `(sh-quoted-exec ((t (:foreground ,chroma-yellow))))
 
+   ;; *Whitespace and whitespace-mode*
+   ;; Standard (expected) whitespace components
+   `(trailing-whitespace ((t (:background ,dark-chroma-red
+                                          :foreground ,chroma-yellow))))
+   `(whitespace-trailing ((t (:inherit trailing-whitespace))))
+   `(whitespace-space ((t (:background ,off-black :foreground ,light-teal))))
+   `(whitespace-hspace ((t (:background ,off-black :foreground ,chroma-red))))
+   `(whitespace-newline ((t (:inherit whitespace-space))))
+   `(whitespace-indentation ((t (:foreground ,off-white
+                                             :background ,very-dark-teal))))
+   `(whitespace-empty ((t (:background ,very-dark-teal))))
+
+   ;; 'Bad' whitespace components, to highlight prominently like errors and warnings
+   ;; (note author's bias for spaces over tabs, where inconsistency is also bad).
+   `(whitespace-tab ((t (:background ,maroon :foreground ,dark-chroma-red))))
+   `(whitespace-space-before-tab ((t (:background ,chroma-yellow
+                                                  :foreground ,dark-chroma-red))))
+   `(whitespace-space-after-tab ((t (:inherit whitespace-space-before-tab))))
+   `(whitespace-line ((t (:background ,maroon))))
+
  )
 ) ; let* ends here
 
