@@ -293,6 +293,10 @@
    `(whitespace-space-after-tab ((t (:inherit whitespace-space-before-tab))))
    `(whitespace-line ((t (:background ,maroon))))
 
+   ;; *dired (standard built-in mode only)*
+   `(dired-directory ((t (:foreground ,light-teal :weight ultra-bold))))
+   `(dired-header ((t (:foreground ,off-white :underline t))))
+
  )
 ) ; let* ends here
 
