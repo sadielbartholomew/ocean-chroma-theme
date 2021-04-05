@@ -226,7 +226,7 @@
    `(org-mode-line-clock ((t (:inherit mode-line :foreground ,chroma-yellow))))
    `(org-mode-line-clock-overrun ((t (:inherit mode-line :foreground ,chroma-red))))
 
-   ;; *Diffs, diff-mode and diff-hl*
+   ;; *Diffs and diff-mode*
    ;; Changes
    `(diff-added ((t (:background ,dark-chroma-green :foreground ,chroma-green))))
    `(diff-changed ((t (:background ,dark-chroma-blue :foreground ,off-white))))
@@ -248,11 +248,6 @@
    `(diff-indicator-added ((t (:inherit diff-added))))
    `(diff-indicator-changed ((t (:inherit diff-changed))))
    `(diff-indicator-removed ((t (:inherit diff-removed))))
-
-   ;; Chnages with diff-hl mode
-   `(diff-hl-insert ((t (:inherit fringe :foreground ,chroma-green))))
-   `(diff-hl-change ((t (:inherit fringe :foreground ,off-white))))
-   `(diff-hl-delete ((t (:inherit fringe :foreground ,chroma-red))))
 
    ;; *smerge*
    ;; Main backgrounds for smerge diff blocks
@@ -306,6 +301,12 @@
    ;; *hl-line*
    `(hl-line ((t (:foreground ,nil :background ,dark-chroma-blue :weight bold))))
    `(hl-line-face ((t (:inherit hl-line))))  ; older alias for face hl-line
+
+   ;; *diff-hl*
+   ;; Changes with diff-hl mode
+   `(diff-hl-insert ((t (:inherit fringe :foreground ,chroma-green))))
+   `(diff-hl-change ((t (:inherit fringe :foreground ,off-white))))
+   `(diff-hl-delete ((t (:inherit fringe :foreground ,chroma-red))))
 
  )
 ) ; let* ends here

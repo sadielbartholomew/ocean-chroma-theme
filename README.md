@@ -7,13 +7,25 @@ development so currently just contains some customisation.** :pushpin:
 
 Namely, the theme as-is only sets:
 
-* full customisation for built-in faces and generic elements;
-* full customisation of *certain* built-in modes *only* (the rest not being
-  touched at all except through default face inheritance), those modes
-  currently being:
-  * Outline mode;
-  * Compilation mode;
-  * Org mode.
+* full customisation covering *all* built-in faces and generic elements
+  (e.g. those relating to the fringe, highlighting, incremental search,
+  the mode line, tool tips, links, diffs etc.);
+
+* full customisation of *many* built-in modes, though not all of them (other
+  than indirect customisation by inheritance of faces that are already
+  directly customised), those modes currently being:
+  * org mode;
+  * outline mode;
+  * compilation mode;
+  * diff mode;
+  * smerge mode;
+  * whitespace mode;
+  * dired;
+
+* full customisation of *some* third-party modules, namely (so far):
+  * col-highlight;
+  * hl-line;
+  * diff-hl.
 
 
 ## Underlying colour scheme
