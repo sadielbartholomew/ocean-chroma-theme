@@ -64,7 +64,8 @@
   (custom-theme-set-faces
    `ocean-chroma
 
-   ;; **Generic built-in elements**
+   ;;; **Built-in elements and modes**
+
    ;; Default face
    `(default ((t (:foreground ,duck-egg :background ,off-black :bold nil))))
 
@@ -296,6 +297,15 @@
    ;; *dired (standard built-in mode only)*
    `(dired-directory ((t (:foreground ,light-teal :weight ultra-bold))))
    `(dired-header ((t (:foreground ,off-white :underline t))))
+
+   ;;; **Third-party elements and modes**
+
+   ;; *col-highlight*
+   `(col-highlight ((t (:background ,maroon))))
+
+   ;; *hl-line*
+   `(hl-line ((t (:foreground ,nil :background ,dark-chroma-blue :weight bold))))
+   `(hl-line-face ((t (:inherit hl-line))))  ; older alias for face hl-line
 
  )
 ) ; let* ends here
