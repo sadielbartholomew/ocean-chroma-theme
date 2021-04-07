@@ -60,7 +60,9 @@
      (maroon             "#33000D")
     )
 
-  ;;; Apply the above faces with various styling to define and set the theme
+  ;;; Apply the above scheme to define and set the theme...
+
+  ;;; Faces:
   (custom-theme-set-faces
    `ocean-chroma
 
@@ -303,13 +305,25 @@
    `(hl-line-face ((t (:inherit hl-line))))  ; older alias for face hl-line
 
    ;; *diff-hl*
-   ;; Changes with diff-hl mode
    `(diff-hl-insert ((t (:inherit fringe :foreground ,chroma-green))))
    `(diff-hl-change ((t (:inherit fringe :foreground ,off-white))))
    `(diff-hl-delete ((t (:inherit fringe :foreground ,chroma-red))))
 
- )
-) ; let* ends here
+  )  ; custom-theme-set-faces ends here
+
+  ;;; Variables:
+  (custom-theme-set-variables
+   `ocean-chroma
+
+   ;;; **Third-party elements and modes**
+
+   ;; *fill-column-indicator*
+   `(fci-rule-color ,dark-teal)
+   `(fci-rule-character-color ,dark-teal)
+
+  )  ; custom-theme-set-variables ends here
+
+)  ; let* ends here
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
