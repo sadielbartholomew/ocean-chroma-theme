@@ -309,6 +309,17 @@
    `(diff-hl-change ((t (:inherit fringe :foreground ,off-white))))
    `(diff-hl-delete ((t (:inherit fringe :foreground ,chroma-red))))
 
+   ;; *highlight-indentation*
+   `(highlight-indentation-face ((t (:background ,very-dark-teal))))
+   `(highlight-indentation-current-column-face ((t (:background ,dark-teal))))
+
+   ;; *visible-mark*
+   `(visible-mark-active ((t (:background ,dark-chroma-green))))
+   `(visible-mark-face1 ((t (:background ,dark-chroma-red))))
+   `(visible-mark-face2 ((t (:background ,mid-teal))))
+   `(visible-mark-forward-face1 ((t (:background ,maroon))))
+   `(visible-mark-forward-face2 ((t (:background ,dark-teal))))
+
   )  ; custom-theme-set-faces ends here
 
   ;;; Variables:
