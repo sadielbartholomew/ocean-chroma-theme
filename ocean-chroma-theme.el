@@ -320,6 +320,18 @@
    `(visible-mark-forward-face1 ((t (:background ,maroon))))
    `(visible-mark-forward-face2 ((t (:background ,dark-teal))))
 
+   ;; *rainbow-delimiters* (cycle with chroma colours except top-level off-white)
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,off-white))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,chroma-yellow))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,chroma-red))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,chroma-yellow))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,chroma-red))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-unmatched-face ((t (:foreground ,maroon :bold t))))
+
   )  ; custom-theme-set-faces ends here
 
   ;;; Variables:
