@@ -78,4 +78,5 @@ Explicitly, this theme as-is includes:
   * `diff-hl`;
   * `fill-column-indicator`;
   * `highlight-indentation`;
-  * `visible-mark`.
+  * `visible-mark`;
+  * `rainbow-delimiters`.

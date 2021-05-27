@@ -167,13 +167,13 @@
 
    ;; Cycle through 'chroma' (primary) colours for nested level headings
    `(org-level-1 ((t (:foreground ,chroma-yellow))))
-   `(org-level-2 ((t (:foreground ,chroma-red))))
+   `(org-level-2 ((t (:foreground ,chroma-green))))
    `(org-level-3 ((t (:foreground ,chroma-blue))))
-   `(org-level-4 ((t (:foreground ,chroma-green))))
+   `(org-level-4 ((t (:foreground ,chroma-red))))
    `(org-level-5 ((t (:foreground ,chroma-yellow))))
-   `(org-level-6 ((t (:foreground ,chroma-red))))
+   `(org-level-6 ((t (:foreground ,chroma-green))))
    `(org-level-7 ((t (:foreground ,chroma-blue))))
-   `(org-level-8 ((t (:foreground ,chroma-green))))
+   `(org-level-8 ((t (:foreground ,chroma-red))))
 
    ;; Other prominent org elements e.g. level markers and links
    `(org-tag ((t (:slant italic :underline t))))
@@ -323,14 +323,14 @@
    ;; *rainbow-delimiters* (cycle with chroma colours except top-level off-white)
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,off-white))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,chroma-yellow))))
-   `(rainbow-delimiters-depth-3-face ((t (:foreground ,chroma-red))))
-   `(rainbow-delimiters-depth-4-face ((t (:foreground ,chroma-green))))
-   `(rainbow-delimiters-depth-5-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,chroma-red))))
    `(rainbow-delimiters-depth-6-face ((t (:foreground ,chroma-yellow))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground ,chroma-red))))
-   `(rainbow-delimiters-depth-8-face ((t (:foreground ,chroma-green))))
-   `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-blue))))
-   `(rainbow-delimiters-unmatched-face ((t (:foreground ,maroon :bold t))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-red))))
+   `(rainbow-delimiters-unmatched-face ((t (:inherit trailing-whitespace))))
 
   )  ; custom-theme-set-faces ends here
 
