@@ -71,6 +71,7 @@ Explicitly, this theme as-is includes:
   * `smerge-mode`;
   * `whitespace-mode`;
   * `dired`;
+  * `git` built-in modes (so not including `magit`, etc.);
 
 * full customisation of *some* third-party modules, namely (so far):
   * `col-highlight`;

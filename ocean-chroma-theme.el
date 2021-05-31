@@ -332,6 +332,14 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-red))))
    `(rainbow-delimiters-unmatched-face ((t (:inherit trailing-whitespace))))
 
+   ;; *git* (outside of magit, etc.)
+   `(git-commit-summary ((t (:foreground ,light-teal :weight bold))))
+   `(git-commit-overlong-summary ((t (:foreground ,chroma-red :weight bold))))
+   ;; Enforce standard one-line commit summary message by colouring as "error":
+   `(git-commit-nonempty-second-line ((t (:inherit git-commit-overlong-summary))))
+   `(git-rebase-hash ((t (:inherit magit-hash))))
+   `(git-rebase-comment-heading ((t (:foreground ,light-teal :underline t))))
+
   )  ; custom-theme-set-faces ends here
 
   ;;; Variables:
