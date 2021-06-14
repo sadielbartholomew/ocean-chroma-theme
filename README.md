@@ -80,4 +80,5 @@ Explicitly, this theme as-is includes:
   * `fill-column-indicator`;
   * `highlight-indentation`;
   * `visible-mark`;
-  * `rainbow-delimiters`.
+  * `rainbow-delimiters`;
+  * `hlinum`.

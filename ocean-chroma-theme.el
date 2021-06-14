@@ -332,6 +332,11 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-red))))
    `(rainbow-delimiters-unmatched-face ((t (:inherit trailing-whitespace))))
 
+   ;; *hlinum* (required for line number highlighting before Emacs 26)
+   `(linum-highlight-face ((t (:foreground ,light-teal
+                                           :background ,dark-teal :weight bold))))
+   `(nlinum-current-line ((t (:inherit linum-highlight-face))))
+
    ;; *git* (outside of magit, etc.)
    `(git-commit-summary ((t (:foreground ,light-teal :weight bold))))
    `(git-commit-overlong-summary ((t (:foreground ,chroma-red :weight bold))))
