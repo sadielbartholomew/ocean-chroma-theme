@@ -12,23 +12,32 @@ depicted in the more subtle ocean colours.
 
 ## Screenshots
 
-A screenshot showcasing `ocean-chroma` for two windows split vertically, both
-with a Python file in the buffer, where an incremental search has been
-initiated to demonstrate the minibuffer prompt and examples of highlighting:
+Screenshots of an Emacs window with buffers covering a small selection
+of languages, modes and active features, where `ocean-chroma` is set as the
+theme in all cases:
 
-![ocean_chroma_theme_screenshot_python_isearch](img/screenshot-python-isearch.png)
 
-Another screenshot illustrating `ocean-chroma` for three windows, namely:
+### Emacs Lisp
 
-* at top left, a window with a `dired` listing after some markings have been
-  made;
-* at bottom left, a window with a basic `org-mode` file open showing for
-  example a code block with themed syntax highlighting and use of a
-  variable-pitch font (see below for details);
-* on the right, an Emacs Lisp buffer that additionally demonstrates the
-  highlighting of a region:
+![ocean_chroma_theme_screenshot_elisp](img/screenshot_elisp.png)
 
-![ocean_chroma_theme_screenshot_dired_org_lisp](img/screenshot-dired-org-lisp.png)
+
+### Python
+
+![ocean_chroma_theme_screenshot_python](img/screenshot_python.png)
+
+
+### HTML and CSS (with an active `isearch`)
+
+![ocean_chroma_theme_screenshot_html_css_isearch](img/screenshot_html_css_isearch.png)
+
+
+### `org-mode` and `dired`
+
+![ocean_chroma_theme_screenshot_org_dired](img/screenshot_org_dired.png)
+
+
+### Notes about the screenshots
 
 Note that the screenshots above are taken with my personal
 [`.emacs` configuration](https://github.com/sadielbartholomew/sadielbartholomew/blob/master/dotfiles/.emacs),
