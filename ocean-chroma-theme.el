@@ -189,7 +189,6 @@
    ;; Code blocks
    '(org-meta-line ((t (:inherit linum))))
    `(org-block ((t (:background ,extra-dark-teal))))
-   `(org-block-background ((t (:background ,extra-dark-teal))))
 
    ;; Tables and grids, including table formulae
    `(org-table ((t (:foreground ,light-teal))))
